@@ -1,0 +1,21 @@
+{
+    "name": "foggyline/magento2-mail-logger",
+    "description": "Logger for outgoing emails",
+    "require": {
+        "php": "~5.6.5|7.0.2|7.0.4|~7.0.6",
+        "magento/module-store": "100.1.*"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Foggyline\\MailLogger\\": ""
+        }
+    }
+}
