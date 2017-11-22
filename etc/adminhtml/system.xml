@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="system">
+            <tab>advanced</tab>
+            <group id="foggyline_maillogger" translate="label" type="text" sortOrder="21" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Mail Logging Settings</label>
+                <comment><![CDATA[This functionality has been added via Foggyline_MailLogger module. Depending on options configured here, module will log either "all" or just "exception triggering" emails that utilize Magento's Magento\Framework\Mail\Transport sendMessage() method. Module logs both "email body content" (.html) info and "overall debug info" info (.log) into to a var/log/foggyline_mail_logger/ folder. Mind you, logging full email information to a file system imposes a potential security risk; whereas public exposure of var/log/foggyline_mail_logger/ folder will lead to exposure of sensitive customer information. Therefore, use this functionality at your own risk - preferably only in development environments.]]></comment>
+                <field id="logging" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Logging</label>
+                    <source_model>Foggyline\MailLogger\Model\Config\Source\LoggingOptions</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
