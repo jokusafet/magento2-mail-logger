@@ -11,3 +11,10 @@ Generated log files have a name pattern that matches store code and timestamp su
 The `*.html` files can easily be opened in browser to reveal exact content of email, whereas the `*.log` files give detailed info such as: from, to, headers, etc.
 
 Tested on Magento Open Source (formerly Community Edition) ver. 2.1.9.
+
+Install instructions:
+* `composer require foggyline/magento2-mail-logger`
+* php bin/magento module:enable Foggyline_MailLogger
+* php bin/magento setup:update
+* php bin/magento setup:di:compile
+* config under `Stores > Settings > Configuration > Advanced > System > Mail Logging Settings` admin section
